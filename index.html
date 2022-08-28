@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>LampTime</title>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+
+		.container {
+			width: 94%;
+			height: auto;
+			margin: 0 3%;
+			box-sizing: border-box;
+			padding: 20px 10px;
+		}
+
+		.lamp {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 300px;
+		}
+
+		.img {
+			box-shadow: 3px 3px 3px grey;
+			padding: 10px;
+			border: 1px solid;
+		}
+
+		.button {
+			text-align: center;
+		}
+
+		.btn {
+			padding: 10px;
+			background-color: grey;
+			color: white;
+			border: none;
+			box-shadow: 2px 2px 2px grey;
+			margin: 10px 0;
+			width: 200px;
+		}
+
+		.btn:hover {
+			background-color: blue;
+			padding: 15px;
+		}
+
+		.container footer {
+			margin-top: 20px;
+			text-align: center;
+			font-size: 13px;
+		}
+
+	</style>
+</head>
+<body>
+	<div class="container">
+		<div class="lamp">		
+		<img src="img/malam.png" height="200px" id="lamp" class="img">
+		</div>
+		<div class="button">
+			<button class="btn" onclick="Pagi();">Pagi</button><br>
+			<button class="btn" onclick="Siang();">Siang</button><br>
+			<button class="btn" onclick="Sore();">Sore</button><br>
+			<button class="btn" onclick="Malam();">malam</button>
+		</div>
+		<footer>
+			<p>Yanz @2022 LampTime</p>
+		</footer>
+	</div>
+
+	<script>
+		function Pagi() {
+			let lamp = document.getElementById('lamp');
+
+			lamp.setAttribute("src", "img/pagi.png");
+		}
+
+		function Siang() {
+			let lamp = document.getElementById('lamp');
+
+			lamp.setAttribute("src", "img/siang.png");
+		}
+
+		function Sore() {
+			let lamp = document.getElementById('lamp');
+
+			lamp.setAttribute("src", "img/sore.png");
+		}
+
+		function Malam() {
+			let lamp = document.getElementById('lamp');
+
+			lamp.setAttribute("src", "img/malam.png");
+		}
+	</script>
+</body>
+</html>
